@@ -11,7 +11,7 @@ public class Practice {
         for (int j = 1; j < n; j++) {  
             int index = array[j];  
             int i = j-1;  
-            while ( (i > -1) && ( array [i] > index ) ) {  
+            while (array [i] > index ) {  
                 array [i+1] = array [i];  
                 i--;  
             }  
