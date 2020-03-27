@@ -13,11 +13,23 @@ public class Practice {
             int i = j-1;  
             while (array [i] > index ) {  
                 array [i+1] = array [i];  
-                i--;  
             }  
             array[i+1] = index;  
         }  
     }  
+    /* change the position of i and j to test 
+       public static void insertionSort(int array[]) {  
+        int n = array.length;  
+        for (int i = 0; i < n-1; i++) {  
+            int index = array[i];  
+            int j = i+1;  
+            while (   array [i] < index  ) {  
+                array [i+1] = array [i];  
+            }  
+            array[i] = index;  
+        }  
+    } */
+    
     public static void selectionSort(int array[]){  
         for (int i = 0; i < array.length - 1; i++)  
         {  
