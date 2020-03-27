@@ -1,0 +1,49 @@
+1. Write a method that sorts a list of integers with the selection sort algorithm.
+2.Write a method that sorts a list of integers with the insertion sort algorithm.
+my code:
+package practice;
+
+import java.util.Random;
+public class Practice {
+    private static Random Nums = new Random() ;
+    public static void insertionSort(int array[]) {  
+        int n = array.length;  
+        for (int j = 1; j < n; j++) {  
+            int index = array[j];  
+            int i = j-1;  
+            while ( (i > -1) && ( array [i] > index ) ) {  
+                array [i+1] = array [i];  
+                i--;  
+            }  
+            array[i+1] = index;  
+        }  
+    }  
+    public static void selectionSort(int array[]){  
+        for (int i = 0; i < array.length - 1; i++)  
+        {  
+            int index = i;  
+            for (int j = i + 1; j < array.length; j++){  
+                if (array[j] < array[index]){  
+                    index = j;//searching for lowest index  
+                }  
+            }  
+            int smallerNumber = array[index];   
+            array[index] = array[i];  
+            array[i] = smallerNumber;  
+        }  
+    }
+        public static void main(String[] args) {
+       
+        int[] numbers = new int [8];
+        for (int i = 0; i < numbers.length; i ++){
+            numbers[i]=Nums.nextInt(100);
+            System.out.println(numbers[i]);
+        }
+        selectionSort (numbers);
+        for(int i:numbers){    
+            System.out.print(i+" ");    
+        }    
+        insertionSort (numbers); 
+          for(int i:numbers){    
+            System.out.print(i+" ");    
+        }    
